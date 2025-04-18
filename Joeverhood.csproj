@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>com.github.decibillyjoel.Joeverhood</AssemblyName>
+    <Authors>DBJ</Authors>
+    <Description>Joeverhauls the core game mechanics</Description>
+    <Product>Joeverhood</Product>
+    <!--
+      Except this, you should keep this up to date with your publishing tags.
+    -->
+    <Version>0.0.1</Version>
+
+    <!--
+      Access private fields
+    -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+
+    <!-- 
+      You shouldn't have to change these, but you could if you wanted to.
+    -->
+    <RootNamespace>Joeverhood</RootNamespace>
+    <TargetName>Joeverhood</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference
+      Include="BepInEx.Analyzers"
+      PrivateAssets="all"
+      Version="1.*"
+    />
+    <PackageReference
+      Include="BepInEx.Core"
+      Version="5.4.*"
+    />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Publicize>True</Publicize>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference
+      Include="Microsoft.NETFramework.ReferenceAssemblies"
+      PrivateAssets="all"
+      Version="1.0.2"
+    />
+  </ItemGroup>
+  
+</Project>
