@@ -23,7 +23,6 @@ public static class GodMachineBombPatch
     [HarmonyPriority(priority: int.MinValue)]
     [HarmonyPrefix]
     public static void Run_Prefix(RocaVS.PlayParticleSystem __instance){
-        Joeverhood.Log(LogLevel.Debug, $"GodMachineBombPatch: Run_Prefix called on {__instance.thisparticleSystem.gameObject.name}");
         float time = Joeverhood.godMachineBombScalarDisabled.Value ? 1f : Joeverhood.godMachineBombScalar.Value;
         float scalar = 1f / Mathf.Max(time, float.Epsilon);
 
