@@ -7,5 +7,17 @@
       Version="1.0.2"
     />
   </ItemGroup>
-  
+
+  <Target Name="DownloadILUtils" Condition="!Exists('$(SolutionDir)/libs/ILUtils/ILUtils.dll')">
+    <DownloadFile
+      SourceUrl="https://github.com/DecibillyJoel/ILUtils/releases/latest/download/ILUtils.dll"
+      DestinationFolder="$(SolutionDir)/libs/ILUtils/"
+      DestinationFileName="ILUtils.dll"
+    />
+  </Target>
+
+  <Target Name="FetchNeededAssemblies" BeforeTargets="AfterClean;BeforeBuild;BeforeCompile;CoreCompile;BeforeResolveReference">
+    <CallTarget Targets="DownloadILUtils;" />
+  </Target>
+
 </Project>

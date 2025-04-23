@@ -7,9 +7,9 @@
     <Description>Joeverhauls the core game mechanics</Description>
     <Product>Joeverhood</Product>
     <!--
-      Except this, you should keep this up to date with your publishing tags.
+      You should keep this up to date with your publishing tags.
     -->
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
 
     <!--
       Access private fields
@@ -25,15 +25,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" />
-    <PackageReference
-      Include="BepInEx.Analyzers"
-      PrivateAssets="all"
-      Version="1.*"
-    />
-    <PackageReference
-      Include="BepInEx.Core"
-      Version="5.4.*"
-    />
+    <PackageReference Include="BepInEx.Analyzers" PrivateAssets="all" Version="1.*" />
+    <PackageReference Include="BepInEx.Core" Version="5.4.*" />
     <Reference Include="Assembly-CSharp">
       <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Publicize>True</Publicize>
@@ -56,12 +49,25 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\UnityEngine.dll</HintPath>
+      <Publicize>True</Publicize>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Publicize>True</Publicize>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
       <HintPath>$(MSBuildProgramFiles32)\Steam\steamapps\common\Everhood2\Everhood2\Everhood 2_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Publicize>True</Publicize>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ILUtils">
+      <HintPath>$(SolutionDir)/libs/ILUtils/ILUtils.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 </Project>

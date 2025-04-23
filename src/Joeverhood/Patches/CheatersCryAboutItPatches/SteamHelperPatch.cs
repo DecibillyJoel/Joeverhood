@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using Joeverhood.libs.ILStepper;
-using Joeverhood.libs.HarmonyXExtensions;
+using ILUtils;
+using ILUtils.HarmonyXtensions;
 
 using LogLevel = BepInEx.Logging.LogLevel;
 using Object = UnityEngine.Object;

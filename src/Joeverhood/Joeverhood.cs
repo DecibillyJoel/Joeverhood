@@ -8,11 +8,12 @@ using UnityEngine;
 namespace Joeverhood
 {
     [BepInPlugin(pluginGuid, pluginName, pluginVersion)]
+    [BepInDependency(ILUtils.Plugin.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
     public class Joeverhood : BaseUnityPlugin
     {
         public const string pluginGuid = "com.github.decibillyjoel.joeverhood";
         public const string pluginName = "Joeverhood";
-        public const string pluginVersion = "0.0.1";
+        public const string pluginVersion = "0.0.2";
 
         public static ConfigEntry<bool> swapWeaponButtonDisabled = null!;
         public static ConfigEntry<KeyCode> swapWeaponButton = null!;
@@ -25,7 +26,8 @@ namespace Joeverhood
 
         public static bool AreCheatersCryingAboutIt => 
             (swapWeaponButtonDisabled.Value == false && swapWeaponButton.Value != KeyCode.None) ||
-            (sprintButtonDisabled.Value == false && sprintButton.Value != KeyCode.None);
+            (sprintButtonDisabled.Value == false && sprintButton.Value != KeyCode.None) || 
+            (godMachineBombScalarDisabled.Value == false && godMachineBombScalar.Value < 1f);
 
         public static ManualLogSource PluginLogger = null!;
         public static readonly Harmony harmony = new(pluginGuid);

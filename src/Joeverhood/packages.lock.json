@@ -38,6 +38,15 @@
           "System.Reflection.Emit": "4.7.0"
         }
       },
+      "LethalCompany.GameLibs.Steam": {
+        "type": "Transitive",
+        "resolved": "62.0.0-ngd.0",
+        "contentHash": "q//jNDXb9b4FKHsR7b4zYAONWas5V0HJQR1jvnM9Ib1Z5rPGsBeElOkW4TNsqKmszsf/m8MkcJI4dszxhVgsxg==",
+        "dependencies": {
+          "Newtonsoft.JSON": "13.0.3",
+          "UnityEngine.Modules": "2022.3.9"
+        }
+      },
       "Microsoft.NETCore.Platforms": {
         "type": "Transitive",
         "resolved": "1.1.0",
@@ -81,6 +90,11 @@
           "System.Reflection.Emit.Lightweight": "4.7.0",
           "System.Reflection.TypeExtensions": "4.7.0"
         }
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "13.0.3",
+        "contentHash": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ=="
       },
       "System.Collections": {
         "type": "Transitive",
@@ -358,6 +372,18 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "UnityEngine.Modules": {
+        "type": "Transitive",
+        "resolved": "2022.3.9",
+        "contentHash": "sSxqZjd05U0NWlX+eappdlsEuXFvDRHkUaClDVTocGRzCmIwNvgGJIPh22lGklIpNZ3cJZneYJkIUnEIazR8VA=="
+      },
+      "com.github.decibillyjoel.ILUtils": {
+        "type": "Project",
+        "dependencies": {
+          "BepInEx.Core": "[5.4.*, )",
+          "LethalCompany.GameLibs.Steam": "[62.0.0-ngd.0, )"
         }
       }
     }
