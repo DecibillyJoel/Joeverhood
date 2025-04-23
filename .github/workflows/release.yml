@@ -34,6 +34,6 @@ jobs:
           generate_release_notes: true
           make_latest: "true"
           files: |
-            src/LC_Giftbox_Config/bin/Debug/LC_Giftbox_Config.dll
+            src/Joeverhood/bin/Debug/Joeverhood.dll
             libs/ILUtils/ILUtils.dll
             LICENSE.md
